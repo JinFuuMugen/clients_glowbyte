@@ -1,4 +1,4 @@
-package com.clients.cip.dao;
+package com.clients.cip.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Data
 @Entity
-public class ListDAO {
+public class Listing {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +22,6 @@ public class ListDAO {
     private String name;
 
     @ManyToMany(mappedBy = "lists") // Указываем обратную сторону отношения
-    private List<ClientDAO> clients;
+    private List<Client> clients;
 
 }

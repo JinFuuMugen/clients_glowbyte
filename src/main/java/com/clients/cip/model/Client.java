@@ -1,4 +1,4 @@
-package com.clients.cip.dao;
+package com.clients.cip.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @Data
 @Entity
-public class ClientDAO {
+public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +30,7 @@ public class ClientDAO {
             joinColumns = @JoinColumn(name = "client_id"),
             inverseJoinColumns = @JoinColumn(name = "list_id")
     )
-    private List<ListDAO> lists;
+    private List<Listing> lists;
 
 
 }
