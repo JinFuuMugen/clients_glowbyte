@@ -5,9 +5,9 @@ import lombok.Data;
 
 import java.util.List;
 
-@Data
 @AllArgsConstructor
+@Data
 public class ClientsWithLists {
     private Long clientID;
-    private List<Listing> listOfClients;
+    private List<ListsInfo> lists;
 }
